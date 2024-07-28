@@ -1,0 +1,18 @@
+package buoi1;
+
+import java.util.*;
+
+public class main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhap ban kinh: ");
+		double r = sc.nextDouble();
+		double chuVi = 2 * Math.PI*r;
+		double dienTich = Math.PI*r*r;
+		
+		chuVi = Math.round(chuVi*1000.0) / 1000.0;
+		dienTich = Math.round(dienTich*1000.0) / 1000.0;
+		System.out.println("chu vi la: " + chuVi);
+		System.out.println("dien tich la: " + dienTich);
+	}
+}
