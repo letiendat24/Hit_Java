@@ -1,0 +1,30 @@
+package buoi3;
+
+import java.util.*;
+
+public class ex1 {
+	public class shapeConstants {
+		public static final String VUONG = "Square";
+		public static final String TRON = "Circle";
+		public static final String TAM_GIAC = "Triangle";
+	}
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		String type = s.nextLine();
+		double area=0;
+		if (type.equals(shapeConstants.VUONG)) {
+			int canh = s.nextInt();
+			area = Math.pow(canh, 2);
+		} else if (type.equals(shapeConstants.TRON)) { 
+			int bk = s.nextInt();
+			area = Math.PI * Math.pow(bk, 2);
+		} else if (type.equals(shapeConstants.TAM_GIAC)) {
+			int a = s.nextInt();
+			int b = s.nextInt();
+			int c = s.nextInt();
+			double p = (a+b+c) / 2;
+			area = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+		}
+		System.out.println(area);
+	}
+}
